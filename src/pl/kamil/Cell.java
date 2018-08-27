@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Cell
 {
+    private final String ALIVE = "O";
+    private final String DEAD = " ";
     private final int rowIndex;
     private final int columnIndex;
     private boolean alive;
@@ -14,6 +16,16 @@ public class Cell
         this.rowIndex = rowIndex;
         this.columnIndex = columnIndex;
         alive = false;
+    }
+
+    public String getALIVE()
+    {
+        return ALIVE;
+    }
+
+    public String getDEAD()
+    {
+        return DEAD;
     }
 
     public boolean isAlive()
@@ -66,7 +78,7 @@ public class Cell
         return false;
     }
 
-    private List<Cell> getNeighours(Board board)
+    public List<Cell> getNeighours(Board board)
     {
         List<Cell> returnList = new LinkedList<>();
 
@@ -87,6 +99,6 @@ public class Cell
     @Override
     public String toString()
     {
-        return alive ? "O" : " ";
+        return alive ? ALIVE : DEAD;
     }
 }

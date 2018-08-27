@@ -34,7 +34,7 @@ public class Console
     {
         Board board = new Board(5);
         board.setAlive(1, 1);
-        //board.setAlive(1,2);
+        board.setAlive(1, 2);
         board.setAlive(1, 3);
         board.setAlive(1, 4);
         board.setAlive(2, 4);
@@ -43,6 +43,8 @@ public class Console
         console.printBoard();
         console.printNextBoard();
         console.printNextBoard();
+
+
     }
 
 }
