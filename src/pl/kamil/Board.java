@@ -72,7 +72,6 @@ public class Board
     {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(getDash());
-        stringBuilder.append(System.lineSeparator());
         for(var cell : getCells())
         {
             if(cell.getColumnIndex()==0)
@@ -105,6 +104,7 @@ public class Board
             stringBuilder.append("-");
         }
         stringBuilder.append("+");
+        stringBuilder.append(System.lineSeparator());
         return stringBuilder.toString();
     }
 }
